@@ -1,0 +1,26 @@
+.layout {
+    min-height: 100vh;
+
+    .content {
+        margin: 0 16px;
+
+        .breadcrumb {
+            margin: 16px 0;
+        }
+    }
+
+    .footer {
+        text-align: center;
+    }
+}
+
+.site-layout .site-layout-background {
+    background: #fff;
+}
+
+.conent-conainer {
+    background: #fff;
+    min-height: 100%;
+    padding: 24px;
+    border-radius: 8px;
+}
