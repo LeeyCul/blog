@@ -8,15 +8,23 @@ import Headers from './header'
 import Logo from './logo'
 import PageFooter from './footer'
 
+const { useState } = React
 const { Content, Sider, Footer, Header } = Layout
 
 interface IProps {
     children: React.ReactNode
 }
+
 const BaseLayout: React.FC<IProps> = ({ children }) => {
+    const [collapsed, setCollapsed] = useState(false)
+
+    function onCollapse(collapsed: boolean) {
+        setCollapsed(collapsed)
+    }
+
     return (
         <Layout className="layout">
-            <Sider>
+            <Sider collapsible collapsed={collapsed} onCollapse={onCollapse}>
                 <Logo />
                 <AsideMenu />
             </Sider>

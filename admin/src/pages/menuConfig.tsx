@@ -1,15 +1,20 @@
 export default [
-    { name: '用户数据统计', path: '/' },
+    { name: '首页', path: '/' },
     {
         name: '博客管理',
-        path: '/1',
+        path: '/blogManage',
         children: [
-            { name: '发表列表', path: '/a' },
-            { name: '博客发布', path: '/b' }
+            { name: '添加修改文章', path: '/addArticle' },
+            { name: '博客列表', path: '/articleList' }
         ]
     },
-    { name: '博客设置', path: '/2' },
-    { name: '文章贡献', path: '/3' },
-    { name: '个人生活', path: '/4' },
-    { name: '系统设置', path: '/5' }
+    {
+        name: '留言管理',
+        path: '/comment',
+        children: [
+            { name: '留言管理', path: '/messageManage' },
+            { name: '评论管理', path: '/commentManage' }
+        ]
+    },
+    { name: '权限管理', path: '/power' }
 ]

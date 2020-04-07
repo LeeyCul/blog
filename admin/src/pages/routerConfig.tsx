@@ -5,6 +5,6 @@ const Home = lazy(() => import('./home'))
 const Test = lazy(() => import('./test'))
 
 export default [
-    { path: '/a', component: Home, exact: true },
-    { path: '/', component: Test, exact: true }
+    { path: '/', component: Home, exact: true },
+    { path: '/a', component: Test, exact: true }
 ]

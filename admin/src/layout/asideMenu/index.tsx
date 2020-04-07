@@ -9,7 +9,7 @@ const { SubMenu } = Menu
 
 const NavBar = () => {
     return (
-        <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
+        <Menu theme="dark" defaultSelectedKeys={['/']} mode="inline">
             {createMenu(menuConfig)}
         </Menu>
     )
