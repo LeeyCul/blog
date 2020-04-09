@@ -1,0 +1,20 @@
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+
+    li {
+        padding: 0.5rem;
+        font-size: 16px;
+        font-weight: 400;
+        cursor: pointer;
+
+        a {
+            color: #666;
+        }
+    }
+
+    .active {
+        background: #c0ebf7;
+    }
+}

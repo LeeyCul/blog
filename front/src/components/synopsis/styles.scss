@@ -1,0 +1,40 @@
+.synopsis-conainer {
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid #eaeaea;
+    padding: 0 15px 10px;
+    transition: all 0.35s;
+    // height: 200px;
+
+    h3 {
+        color: #fff;
+        margin: -1px 0 0;
+        display: inline-block;
+        padding: 4px 15px;
+        font-size: 14px;
+        background-color: #1890ff;
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin-top: 10px;
+        line-height: 24px;
+        text-align: justify;
+        text-align-last: left;
+    }
+
+    .account {
+        display: flex;
+        justify-content: center;
+
+        i {
+            cursor: pointer;
+            display: inline-block;
+            height: 32px;
+            width: 42px;
+            line-height: 32px;
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+}
