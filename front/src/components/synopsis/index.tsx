@@ -3,14 +3,8 @@ import { Divider, Tooltip } from 'antd'
 
 import './styles.scss'
 
-interface IState {
-    icon: string
-    url: string
-    text?: string
-}
-
 function Synopsis() {
-    const iconList: Array<IState> = [
+    const iconList: Array<Layouts.IState> = [
         { icon: 'icon-github', url: 'https://github.com/LeeyCul' },
         { icon: 'icon-logo-wechat', url: '', text: '微信号： kyxiaopei' },
         { icon: 'icon-email', url: 'https://mail.163.com/' }
@@ -36,8 +30,13 @@ function Synopsis() {
                         )
                     }
                     return (
-                        <Tooltip placement="top" title={item.text}>
-                            <a href="javascript:void(0)">
+                        <Tooltip placement="top" title={item.text} key={item.url}>
+                            <a
+                                href=""
+                                onClick={(e: React.MouseEvent) => {
+                                    e.preventDefault()
+                                }}
+                            >
                                 <i className={item.icon} />
                             </a>
                         </Tooltip>

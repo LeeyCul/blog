@@ -1,10 +1,11 @@
 import * as React from 'react'
+import { Link } from 'react-router-dom'
 
 import './style.scss'
 
 import menuConfig from '../../pages/menuConfig'
 
-const { useState, useCallback, useMemo } = React
+const { useState } = React
 
 const NavMenu = () => {
     const [state, setstate] = useState(0)
@@ -15,9 +16,11 @@ const NavMenu = () => {
         <ul className="nav-list">
             {menuConfig.map((menu, key) => {
                 return (
-                    <li key={menu.path} className={state === key ? 'active' : ''} onClick={toggleMenu.bind(null, key)}>
-                        <a href={menu.path}>{menu.name}</a>
-                    </li>
+                    <Link to={menu.path} key={menu.path}>
+                        <li className={state === key ? 'active' : ''} onClick={toggleMenu.bind(null, key)}>
+                            {menu.name}
+                        </li>
+                    </Link>
                 )
             })}
         </ul>

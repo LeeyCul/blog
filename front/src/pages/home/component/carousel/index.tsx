@@ -9,7 +9,7 @@ function Carousels() {
         <Carousel autoplay effect="fade" easing="swing">
             {imgList.map(item => {
                 return (
-                    <div>
+                    <div key={item}>
                         <img src={require(`../../../../assets/img/${item}`)} />
                     </div>
                 )
