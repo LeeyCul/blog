@@ -1,0 +1,29 @@
+.article-conainer {
+    width: 100%;
+    height: 110px;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    background: #fff;
+
+    display: flex;
+
+    &:nth-child(-n + 3) {
+        border-bottom: 1px solid #ded8de;
+    }
+
+    img {
+        width: 100px;
+    }
+
+    .right {
+        padding: 0.5rem;
+        flex-grow: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2; // 控制显示行数
+
+        color: #757575;
+    }
+}

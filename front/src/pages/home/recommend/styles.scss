@@ -1,0 +1,22 @@
+.recommend_conainer {
+    margin-top: 0.5rem;
+    border-radius: 8px;
+    background: #fff;
+
+    h3 {
+        background: #eee;
+        padding: 0.2rem 0.2rem 0.2rem 0.5rem;
+    }
+
+    @media screen and (max-width: 1048px) {
+        .ant-list-items {
+        }
+    }
+
+    @media screen and (min-width: 1060px) {
+        .ant-list-items {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}

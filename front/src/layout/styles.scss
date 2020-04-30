@@ -9,13 +9,17 @@
     }
 
     .content {
-        padding: 0rem 0rem;
+        padding: 16px 16px 0 16px;
 
-        .content-conainer {
+        .content_conainer {
             // background: #fff;
             min-height: 100%;
-            padding: 24px;
+            // padding: 16px;
             border-radius: 8px;
+        }
+
+        .silder_right {
+            // padding: 16px;
         }
     }
 

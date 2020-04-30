@@ -11,13 +11,10 @@
         "module": "esnext",
         "moduleResolution": "node",
         "resolveJsonModule": true,
-        "isolatedModules": true,
+        "isolatedModules": false,
         "noEmit": true,
         "jsx": "react",
-        "baseUrl": "./",
-        "paths": {
-            "types": ["src/types/"]
-        }
+        "baseUrl": "./"
     },
     "include": ["src"]
 }

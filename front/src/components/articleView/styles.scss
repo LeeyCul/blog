@@ -1,0 +1,48 @@
+.article_conainer {
+    box-shadow: 0 4px 5px rgba(25, 111, 231, 0.15);
+    height: 200px;
+    width: 100%;
+    background: #fff;
+    padding: 1rem;
+    cursor: pointer;
+
+    transition: all 0.2s linear;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    &:hover {
+        transform: translate3d(0, -4px, 0);
+    }
+
+    .content_box {
+        padding-left: 1rem;
+
+        h3 {
+            color: #757575;
+            background: none;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1; // 控制显示行数
+
+            &:hover {
+                color: #1890ff;
+            }
+        }
+
+        .text {
+            color: #b0b0b0;
+            font-size: 14px;
+            line-height: 28px;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 5; // 控制显示行数
+        }
+    }
+}

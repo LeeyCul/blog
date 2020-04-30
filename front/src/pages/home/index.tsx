@@ -1,28 +1,42 @@
-import * as React from 'react'
-import { Row, Col, Space } from 'antd'
+import React, { useCallback, useMemo, useState } from 'react'
+import { Row, Col } from 'antd'
+import { connect } from 'react-redux'
+import { bindActionCreators, Dispatch } from 'redux'
 
 import './styles.scss'
 
 import Carousels from './component/carousel'
 import Synopsis from '../../components/synopsis'
+import { actions } from '../../store/actions'
+import Recommend from './recommend'
+import NewRelease from './newRelease'
 
-function Home() {
+interface Props extends Stores.StoreState {
+    dispatch: Dispatch
+    setFrom: { (from: string): string }
+    setTo: { (): boolean }
+}
+
+function Home(props: Props) {
+    const { to, from, dispatch, setTo, setFrom } = props
     return (
         <div className="homeConainer">
-            <Row gutter={[{ xs: 0, sm: 0, md: 14, lg: 16 }, 10]}>
-                <Col xs={24} sm={24} md={17} lg={18} xl={19}>
-                    <div className="leftConent">
-                        <Carousels />
-                    </div>
-                </Col>
-                <Col xs={24} sm={24} md={7} lg={6} xl={5}>
-                    <div className="rightConent">
-                        <Synopsis />
-                    </div>
-                </Col>
-            </Row>
+            <Carousels />
+            <Recommend />
+            <NewRelease />
         </div>
     )
 }
 
-export default Home
+function stateToprops(state: Stores.StoreState) {
+    return {
+        to: state.to,
+        from: state.from
+    }
+}
+
+function dispatchToprops(dispatch: Dispatch) {
+    return bindActionCreators<any, any>(actions, dispatch)
+}
+
+export default connect(stateToprops, dispatchToprops)(Home)

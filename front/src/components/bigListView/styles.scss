@@ -1,0 +1,86 @@
+.list_view_conainer {
+    background: #fff;
+    height: 250px;
+    // box-shadow: 0 4px 5px rgba(25, 111, 231, 0.15);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+
+    position: relative;
+    margin: 0px 0px 10px 50px;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    display: flex;
+    cursor: pointer;
+
+    &:hover {
+        border-bottom: 2px solid #77d8d8;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .list_time {
+        position: absolute;
+        // top: 20px;
+        left: -50px;
+        width: 70px;
+        height: 45px;
+        background: #e5e5e5;
+        filter: alpha(opacity=80);
+        background: hsla(0, 0%, 80%, 0.4);
+
+        span {
+            float: left;
+            font-size: 12px;
+            line-height: 22px;
+            color: #666;
+            text-indent: 10px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 45px;
+            left: 0;
+            border-color: transparent #bbb transparent transparent;
+            border-style: solid;
+            border-width: 0 50px 20px 0;
+            height: 0;
+            width: 0;
+        }
+    }
+
+    .img_box {
+        height: 100%;
+        padding: 0.5rem 0 0.5rem 0;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .conent_conainer {
+        padding-left: 24px;
+        height: 100%;
+
+        .title {
+            color: #333;
+            font-weight: 400;
+            line-height: 34px;
+            font-size: 18px;
+        }
+
+        .content_text {
+            font-weight: 400;
+            line-height: 26px;
+            font-size: 14px;
+            height: 74%;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 5; // 控制显示行数
+        }
+    }
+
+    .tag {
+        color: #999;
+    }
+}

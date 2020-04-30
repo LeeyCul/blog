@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import { LoadingOutlined } from '@ant-design/icons'
 
 import PrivateRoute from '../components/privatRoute'

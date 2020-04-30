@@ -1,0 +1,44 @@
+.proView_conainer {
+    height: 400px;
+    box-shadow: 0 4px 5px rgba(25, 111, 231, 0.15);
+    background: #fff;
+    display: grid;
+    grid-template-rows: 5fr 3fr;
+    border-radius: 8px;
+    cursor: pointer;
+
+    transition: all 0.2s linear;
+
+    &:hover {
+        transform: translate3d(0, -4px, 0);
+    }
+
+    .img_box {
+        height: 100%;
+        // padding: 0.5rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .synopsis {
+        padding: 0.5rem;
+
+        .title {
+            text-align: center;
+            line-height: 28px;
+            font-size: 16px;
+        }
+
+        p {
+            text-indent: 2rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 6; // 控制显示行数
+        }
+    }
+}

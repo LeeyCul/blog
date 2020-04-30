@@ -10,7 +10,7 @@ function Carousels() {
             {imgList.map(item => {
                 return (
                     <div key={item}>
-                        <img src={require(`../../../../assets/img/${item}`)} />
+                        <img src={require(`../../../../assets/img/${item}`)} width="100%" />
                     </div>
                 )
             })}
